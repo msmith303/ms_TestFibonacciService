@@ -8,13 +8,12 @@ holds the py.test files used to test the python project dg_FibonacciService [Fib
 
 ### Install
 
-py.test can be found in tagged revisions on GitHub.
-
-Or in a Docker application:
-
-    docker run ms_FibonacciService
+  $ sudo pip install pytest
+  $ git clone https://github.com/msmith303/ms_TestFibonacciService
 
 ### Usage
+
+  Run all tests when run from the same directory.
 
   $ py.test
   ======= test session starts =======
@@ -23,9 +22,10 @@ Or in a Docker application:
 
   With py.test's detailed assertion intropection, only plain assert statements are used.
 
-### Issues
+  Run a specific test.
 
-  Unable to connect to AWS public IP address.
+  $ py.test Test_FAAS_Calculate_medium.py
+
 
 
 Revision 2 May 2016
