@@ -45,6 +45,10 @@
   4.10 Test_FAAS_Boundary_MaximumNumber
   4.11 Test_FAAS_Boundary_AlphabetChar
   4.12 Test_FAAS_Boundary_ControlChar
+  4.13 Test_FAAS_Edge_BadRequest_400
+  4.14 Test_FAAS_Edge_ResourceNotFound_404
+  4.15 Test_FAAS_Edge_MethodNotSupported_405
+  4.16 Test_FAAS_Edge_ServerError_500
 
 Appendix A: REST API
 
