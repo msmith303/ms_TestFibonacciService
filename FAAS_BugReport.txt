@@ -1,0 +1,19 @@
+			Fibonacci as a Service (FAAS) Bug Report
+
+1. Issues
+
+  FAAS_001:  The fibonacci back-end service retuned status code 500 on a correct GET request.
+
+    Example:
+      $ curl --request GET 'http://172.31.33.214:5000/api/fibonacci/3'
+
+      {
+         "error": "internal server error"
+      }
+
+= = = = = = = = = = = = = =
+
+Blocking Issues not related to the Software Under Test (SUT):
+  Running the images dg-fibonacci-be and dg-fibonacci-fe worked correctly in my Docker container.
+  The only issue is that the public IP was not accessible via a ping.   Testing had to be done locally on the
+  AWS Machine Instance.
