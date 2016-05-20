@@ -1,13 +1,17 @@
 		Fibonacci as a Service (FAAS) Test Plan
 
 1. Overview
+  The Fibonacci Service is an application in the cloud using Docker containers.  The front end (FE) is a python
+  Flask application.  The back end (BE) is also a Flask application which provides a REST api by providing support 
+  for a HTTP GET request.  A Fibonacci sequence is a series of numbers where a number is found by adding up the
+  two numbers before it.
 
 2. Goals
 
 3. Test Approach and Methodology
 
-  Pytest will be the unit test library used to use dependency injection (fixtures), enable easy discovery of tests
-  and to generate the test report (junitxml).
+  Pytest will be the unit test library used to enable easy discovery of tests, to generate a test report (junit xml)
+  and use dependency injection (fixtures).
 
   The REST API library used will the Requests library to send HTTP/1.1 requests which is powered by urllib3.
 
@@ -16,25 +20,31 @@
   The user is invited to manually test the application using the Chrome application PostMan or using curl.
 
   3.1 Functional Testing
+    The Functional tests will test the front end and back end Fibonacci Service application.
   3.2 Boundary Testing
     The Boundary tests will test the extremes of the input domain including maximum, minimum, typical values and error
     values.
   3.3 Edge Testing
-    The Edge tests will test dependent resources such as changing the back end service dg_fibonacci_be and make sure
-    the data sent always receives an appropiate response (see Appendix A).
-  3.4 Negative Testing
-  3.5 Stress Testing
-  3.6 Performance Testing
+    The Edge tests will test dependent resources such as changing the back end service and make sure the data sent
+    always receives an appropiate response (see Appendix A).
+  3.4 Stress Testing
+    Stress testing is out of bounds for these tests.
+  3.5 Performance Testing
+    Performance testing is out of bounds for these tests.
 
 4. Test Cases
   4.1 Test_FAAS_Calculate_small
   4.2 Test_FAAS_Calculate_medium
   4.3 Test_FAAS_Calculate_large
-  4.4 Test_FAAS_Show_Text
-  4.5 Test_FAAS_Show_Json
-  4.6 Test_FAAS_Negative_Number
-  4.7 Test_FAAS_Negative_AlphabetChar
-  4.7 Test_FAAS_Negative_ControlChar
+  4.4 Test_FAAS_Functional_GET_VERB
+  4.5 Test_FAAS_Functional_POST_VERB
+  4.5 Test_FAAS_Functional_PUT_VERB
+  4.5 Test_FAAS_Functional_DELETE_VERB
+  4.6 Test_FAAS_Boundary_TypicalNumber
+  4.6 Test_FAAS_Boundary_MinimumNumber
+  4.6 Test_FAAS_Boundary_MaximumNumber
+  4.7 Test_FAAS_Boundary_AlphabetChar
+  4.7 Test_FAAS_Boundary_ControlChar
 
 Appendix A: REST API
 
@@ -42,7 +52,7 @@ Appendix A: REST API
 
   Description: Provide a result based on an input based on a Fibonacci sequence.
 
-  Endpoint: <app-ip>:5000/dg_fibonacci_be/<num>
+  Endpoint: <app-ip>:5000/fibonacci/<num>
 
   Request: GET
 
@@ -53,9 +63,8 @@ Appendix A: REST API
   Response Code: 200
 
   Response:
-
   {
-
+     'fibonacci': <num>
   }
 
 2. Show results using front-end API.
