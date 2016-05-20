@@ -3,16 +3,16 @@
 import pytest
 import requests
 
-def test_calculate_small():
-    """A py.test for calculating a small number in a fibonacci sequence.
+def test_calculate_large():
+    """A py.test for calculating a typical number in a fibonacci sequence.
     
     """
 
-    URL_STR = "http://52.40.72.9:5000/fibonacci/1"
+    URL_STR = "http://52.40.72.9:5000/fibonacci/100"
     response = requests.get( URL_STR )
     data = response.json()
     assert response.status_code == 200
     
 if __name__ == "__main__":
-    print test_calculate_small()
+    print test_calculate_large()
     
