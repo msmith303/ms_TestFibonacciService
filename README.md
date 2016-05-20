@@ -10,21 +10,17 @@ holds the py.test files used to test the python project dg_FibonacciService.
 
 py.test can be found in tagged revisions on GitHub.
 
-Or in a Docker application via npm:
+Or in a Docker application:
 
-    npm install escodegen
+    docker run ms_FibonacciService
 
 ### Usage
 
-A simple example: the program
+  $ py.test
+  ======= test session starts =======
 
-    py.test({
-        left: { type: 'Literal', value: 40 },
-        right: { type: 'Literal', value: 2 }
-    });
+  =======  1 failed in 0.14 seconds =========
 
-produces the string `'40 + 2'`.
-
-To run the tests, execute `py.test` in the root directory.
+  With py.test's detailed assertion intropection, only plain assert statements are used.
 
 Revision 2 May 2016
