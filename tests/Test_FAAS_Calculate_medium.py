@@ -3,18 +3,16 @@
 import pytest
 import requests
 
-def test_get():
-    """A py.test for testing the GET verb
+def test_calculate_medium():
+    """A py.test for calculating a typical number in a fibonacci sequence.
     
     """
-    ival = 1
-    assert ival == 1
 
-    URL_STR = "https://api.github.com"
+    URL_STR = "http://52.40.72.9:5000/fibonacci/5"
     response = requests.get( URL_STR )
     data = response.json()
-    print(data['current_user_url'])
+    assert response.status_code == 200
     
 if __name__ == "__main__":
-    print test_get()
+    print test_calculate_medium()
     
