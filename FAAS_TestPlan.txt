@@ -1,0 +1,64 @@
+		Fibonacci as a Service (FAAS) Test Plan
+
+1. Overview
+
+2. Goals
+
+3. Test Approach and Methodology
+  3.1 Functional Testing
+  3.2 Boundary Testing
+  3.3 Edge Testing
+  3.4 Negative Testing
+  3.5 Stress Testing
+  3.6 Performance Testing
+
+4. Test Cases
+  4.1 Test_FAAS_Calculate_small
+  4.2 Test_FAAS_Calculate_medium
+  4.3 Test_FAAS_Calculate_large
+  4.4 Test_FAAS_Show_Text
+  4.5 Test_FAAS_Show_Json
+  4.6 Test_FAAS_Negative_Number
+  4.7 Test_FAAS_Negative_AlphabetChar
+  4.7 Test_FAAS_Negative_ControlChar
+
+Appendix A: REST API
+
+1. Calculate
+  Description: Provide a result based on an input based on a Fibonacci sequence.
+
+  Endpoint: <base_url>/dg_fibonacci_fe
+
+  Request: GET
+
+  Formats supported: JSON
+
+  Params: None
+
+  Response Code: 200
+
+  Response:
+
+  {
+
+  }
+
+2. Show
+  Description: Show a result based on an input based on a Fibonacci Sequence.
+
+  Endpoint: <base_url>/dg_fibonacci_fe
+
+  Request: GET
+
+  Formats supported: JSON
+
+  Params: None
+
+  Response Code: 200
+
+  Responce:
+
+  {
+
+  }
+
