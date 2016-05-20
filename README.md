@@ -9,6 +9,7 @@ holds the py.test files used to test the python project dg_FibonacciService [Fib
 ### Install
 
   $ sudo pip install pytest
+
   $ git clone https://github.com/msmith303/ms_TestFibonacciService
 
 ### Usage
@@ -28,4 +29,4 @@ holds the py.test files used to test the python project dg_FibonacciService [Fib
 
 
 
-Revision 2 May 2016
+Revision 4 May 2016
