@@ -38,13 +38,13 @@
   4.3 Test_FAAS_Calculate_large
   4.4 Test_FAAS_Functional_GET_VERB
   4.5 Test_FAAS_Functional_POST_VERB
-  4.5 Test_FAAS_Functional_PUT_VERB
-  4.5 Test_FAAS_Functional_DELETE_VERB
-  4.6 Test_FAAS_Boundary_TypicalNumber
-  4.6 Test_FAAS_Boundary_MinimumNumber
-  4.6 Test_FAAS_Boundary_MaximumNumber
-  4.7 Test_FAAS_Boundary_AlphabetChar
-  4.7 Test_FAAS_Boundary_ControlChar
+  4.6 Test_FAAS_Functional_PUT_VERB
+  4.7 Test_FAAS_Functional_DELETE_VERB
+  4.8 Test_FAAS_Boundary_TypicalNumber
+  4.9 Test_FAAS_Boundary_MinimumNumber
+  4.10 Test_FAAS_Boundary_MaximumNumber
+  4.11 Test_FAAS_Boundary_AlphabetChar
+  4.12 Test_FAAS_Boundary_ControlChar
 
 Appendix A: REST API
 

@@ -1,9 +1,9 @@
-## ms_TestFibonacciService
+## TestFibonacciService
 
 **Test a Fibonacci Service**
 
 ms_TestFibonacciService ([ms_TestFibonacciService](http://github.com/msmith303/ms_TestFibonacciService)) repository
-holds the py.test files used to test the python project dg_FibonacciService.
+holds the py.test files used to test the python project dg_FibonacciService [Fibonacci Service](https://github.com/dmitryzv/dg-fibonacci-be).
 
 
 ### Install
@@ -25,6 +25,7 @@ Or in a Docker application:
 
 ### Issues
 
+  Unable to connect to AWS public IP address.
 
 
 Revision 2 May 2016
