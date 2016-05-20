@@ -5,9 +5,23 @@
 2. Goals
 
 3. Test Approach and Methodology
+
+  Pytest will be the unit test library used to use dependency injection (fixtures), enable easy discovery of tests
+  and to generate the test report (junitxml).
+
+  The REST API library used will the Requests library to send HTTP/1.1 requests which is powered by urllib3.
+
+  The Flask client library tests will also be used.  
+
+  The user is invited to manually test the application using the Chrome application PostMan or using curl.
+
   3.1 Functional Testing
   3.2 Boundary Testing
+    The Boundary tests will test the extremes of the input domain including maximum, minimum, typical values and error
+    values.
   3.3 Edge Testing
+    The Edge tests will test dependent resources such as changing the back end service dg_fibonacci_be and make sure
+    the data sent always receies an appropiate response (see Appendix A).
   3.4 Negative Testing
   3.5 Stress Testing
   3.6 Performance Testing
