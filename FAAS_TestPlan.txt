@@ -21,7 +21,7 @@
     values.
   3.3 Edge Testing
     The Edge tests will test dependent resources such as changing the back end service dg_fibonacci_be and make sure
-    the data sent always receies an appropiate response (see Appendix A).
+    the data sent always receives an appropiate response (see Appendix A).
   3.4 Negative Testing
   3.5 Stress Testing
   3.6 Performance Testing
@@ -38,10 +38,11 @@
 
 Appendix A: REST API
 
-1. Calculate
+1. Calculate using back-end API.
+
   Description: Provide a result based on an input based on a Fibonacci sequence.
 
-  Endpoint: <base_url>/dg_fibonacci_fe
+  Endpoint: <app-ip>:5000/dg_fibonacci_be/<num>
 
   Request: GET
 
@@ -57,22 +58,9 @@ Appendix A: REST API
 
   }
 
-2. Show
+2. Show results using front-end API.
+
   Description: Show a result based on an input based on a Fibonacci Sequence.
 
-  Endpoint: <base_url>/dg_fibonacci_fe
-
-  Request: GET
-
-  Formats supported: JSON
-
-  Params: None
-
-  Response Code: 200
-
-  Responce:
-
-  {
-
-  }
+  Endpoint: http://<app-ip>
 
