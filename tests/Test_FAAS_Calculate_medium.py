@@ -8,7 +8,7 @@ def test_calculate_medium():
     
     """
 
-    URL_STR = "http://52.40.72.9:5000/fibonacci/5"
+    URL_STR = "http://52.40.72.9:5000/api/fibonacci/5"
     response = requests.get( URL_STR )
     data = response.json()
     assert response.status_code == 200
