@@ -2,9 +2,8 @@
 
 **Test a Fibonacci Service**
 
-ms_TestFibonacciService ([ms_TestFibonacciService](http://github.com/msmith303/ms_TestFibonacciService)) is an
-[ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
-code generator from.
+ms_TestFibonacciService ([ms_TestFibonacciService](http://github.com/msmith303/ms_TestFibonacciService)) repository
+holds the py.test files used to test the python project dg_FibonacciService.
 
 
 ### Install
