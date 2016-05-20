@@ -56,7 +56,7 @@ Appendix A: REST API
 
   Description: Provide a result based on an input based on a Fibonacci sequence.
 
-  Endpoint: <app-ip>:5000/fibonacci/<num>
+  Endpoint: <app-ip>:5000/api/fibonacci/<num>
 
   Request: GET
 
