@@ -25,12 +25,6 @@ Or in a Docker application:
 
 ### Issues
 
-1. Unable to run either back-end or front-end docker containers on AWS EC2 even though 'docker build' worked.
-
-[ec2-user@ip-172-31-33-214 GitHub]$ sudo docker run -p 5000:5000 -d --name dg-fibonacci-be dg-fibonacci-be
-Unable to find image 'dg-fibonacci-be:latest' locally
-Pulling repository docker.io/library/dg-fibonacci-be
-Error: image library/dg-fibonacci-be:latest not found
 
 
 Revision 2 May 2016
