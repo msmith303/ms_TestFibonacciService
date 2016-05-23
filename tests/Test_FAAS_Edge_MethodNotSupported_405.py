@@ -8,7 +8,7 @@ def test_methodnotsupported():
     
     """
 
-    URL_STR = "http://52.40.72.9:5000/api/fibonacci/5"
+    URL_STR = "http://52.24.157.193:5000/api/fib/2"
     response = requests.post( URL_STR )
     data = response.json()
     assert response.status_code == 405

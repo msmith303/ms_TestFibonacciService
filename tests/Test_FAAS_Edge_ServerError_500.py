@@ -8,7 +8,7 @@ def test_servererror():
     
     """
 
-    URL_STR = "http://52.40.72.9:5001/api/fibonacci/5"
+    URL_STR = "http://52.24.157.193:5000/api/fibonacci/^m"
     response = requests.post( URL_STR )
     data = response.json()
     assert response.status_code == 500

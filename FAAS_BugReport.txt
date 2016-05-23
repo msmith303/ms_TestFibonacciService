@@ -4,16 +4,74 @@
 
   FAAS_001:  The fibonacci back-end service retuned status code 500 on a correct GET request.
 
-    Example:
+    Example 1:
       $ curl --request GET 'http://172.31.33.214:5000/api/fibonacci/3'
 
       {
          "error": "internal server error"
       }
 
-= = = = = = = = = = = = = =
+    Example 2:
+      $ py.test Test_FAAS_Calculate_medium.py
+============================================================ test session starts =============================================================
+platform darwin -- Python 2.7.11, pytest-2.9.1, py-1.4.31, pluggy-0.3.1
+rootdir: /Users/mikesmtb/GitHub/ms_TestFibonacciService/tests, inifile: 
+collected 1 items 
 
-Blocking Issues not related to the Software Under Test (SUT):
-  Running the images dg-fibonacci-be and dg-fibonacci-fe worked correctly in my Docker container.
-  The only issue is that the public IP was not accessible via a ping.   Testing had to be done locally on the
-  AWS Machine Instance.
+Test_FAAS_Calculate_medium.py F
+
+================================================================== FAILURES ==================================================================
+___________________________________________________________ test_calculate_medium ____________________________________________________________
+
+    def test_calculate_medium():
+        """A py.test for calculating a typical number in a fibonacci sequence.
+    
+        """
+    
+        URL_STR = "http://52.24.157.193:5000/api/fibonacci/5"
+        response = requests.get( URL_STR )
+        data = response.json()
+>       assert response.status_code == 200
+E       assert 500 == 200
+E        +  where 500 = <Response [500]>.status_code
+
+Test_FAAS_Calculate_medium.py:14: AssertionError
+========================================================== 1 failed in 0.30 seconds ==========================================================
+michael-smiths-macbook-pro:tests mikesmtb$ 
+michael-smiths-macbook-pro:tests mikesmtb$ 
+michael-smiths-macbook-pro:tests mikesmtb$ py.test Test_FrontEnd_Calculate_medium.py
+============================================================ test session starts =============================================================
+platform darwin -- Python 2.7.11, pytest-2.9.1, py-1.4.31, pluggy-0.3.1
+rootdir: /Users/mikesmtb/GitHub/ms_TestFibonacciService/tests, inifile: 
+collected 1 items
+
+  = = = = = = =  Front End tests = = = = = = = = = =
+
+  FAAS_002:  The fibonacci front-end service is not responding when the Compute button is pressed.  The web page is
+    reset with the 'Enter number' field cleared.
+
+    Example: curl GET request
+      Note: A POST request returns 405 Method Not Allowed
+  
+    $ curl --request GET 'http://52.24.157.193?number=3&submit=Compute'
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fibonacci Numbers Calculator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/css/theme/slate/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/bootstrap/css/jumbotron-narrow.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+Date:  May 23, 2016

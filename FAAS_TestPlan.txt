@@ -49,6 +49,9 @@
   4.14 Test_FAAS_Edge_ResourceNotFound_404
   4.15 Test_FAAS_Edge_MethodNotSupported_405
   4.16 Test_FAAS_Edge_ServerError_500
+  4.17 Test_FrontEnd_Calculate_small.py
+  4.18 Test_FrontEnd_Calculate_medium.py
+  4.19 Test_FrontEnd_Calculate_large.py
 
 Appendix A: REST API
 

@@ -8,7 +8,7 @@ def test_calculate_large():
     
     """
 
-    URL_STR = "http://52.40.72.9:5000/api/fibonacci/100"
+    URL_STR = "http://52.24.157.193:5000/api/fibonacci/100"
     response = requests.get( URL_STR )
     data = response.json()
     assert response.status_code == 200
