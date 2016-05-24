@@ -52,6 +52,8 @@
   4.17 Test_FrontEnd_Calculate_small.py
   4.18 Test_FrontEnd_Calculate_medium.py
   4.19 Test_FrontEnd_Calculate_large.py
+  4.20 Test_FrontEnd_SendHttp_ShownByFirebug.py
+  4.21 Test_FAAS_WhiteBox_FibCalc.py
 
 Appendix A: REST API
 
